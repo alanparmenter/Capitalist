@@ -8,6 +8,6 @@ class Bank:
   def deposit(self, deposit_amount):
     self.cash += deposit_amount
   def withdraw(self, withdrawal_amount):
-    self.cash -= self.withdrawal_amount
+    self.cash -= withdrawal_amount
   def get_balance(self):
     return self.cash
