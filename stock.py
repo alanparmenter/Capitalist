@@ -7,7 +7,7 @@ class Stock:
     return "This stock has {} price, {} holdings and {} fees".format(self.price, self.holdings, self.fees)
   def buy(self, amount, bank):
     self.holdings += (amount - self.fees) / self.price
-    band.withdraw(amount)
+    bank.withdraw(amount)
   def sell(self, amount, bank):
     self.holdings -= amount / self.price
     bank.deposit(amount - self.fees)
