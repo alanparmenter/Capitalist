@@ -10,3 +10,5 @@ print("{} balance after purchase: {}".format(farclays.name, farclays.get_balance
 feta.sell(300, farclays)
 print("Feta holdings as balance after sale: " + str(feta.get_balance()))
 print("{} balance after purchase: {}".format(farclays.name, farclays.get_balance()))
+farclays.pay_interest()
+print("{} balance after interest paid: {}".format(farclays.name, farclays.get_balance()))
