@@ -7,16 +7,21 @@ class Stock:
   def __repr__(self):
     return "This stock has {} price, {} holdings and {} fees".format(self.price, self.holdings, self.fees)
   def buy(self, amount, bank):
-    if amount > bank.get_balance():
+    if (amount*self.price-self.fees) > bank.get_balance():
       print("Transaction failed due to insufficient funds\n")
     elif amount == 0:
       pass
     else:
-      self.holdings += (amount - self.fees) / self.price
-      bank.withdraw(amount)
-      print("{} holdings as balance after purchase: {:.2f}\n".format(self.name, self.get_balance()))
+      self.holdings += amount
+      bank.withdraw(amount*self.price+self.fees)
+      print("{} holdings as balance after purchase: {:.2f}".format(self.name, self.get_balance()))
   def sell(self, amount, bank):
-    self.holdings -= amount / self.price
-    bank.deposit(amount - self.fees)
+    if amount <= self.holdings:
+      self.holdings -= amount
+      bank.deposit(amount*self.price-self.fees)
+    elif amount == 0:
+      pass
+    else:
+      print("Transaction failed due to insufficient stock\n")
   def get_balance(self):
     return self.holdings * self.price
