@@ -13,3 +13,4 @@ class Bank:
     return self.cash
   def pay_interest(self):
     self.cash *= (1+self.interest_rate)
+    print("{} balance after interest paid: {:.2f}".format(self.name, self.get_balance()))

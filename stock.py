@@ -9,6 +9,7 @@ class Stock:
   def buy(self, amount, bank):
     self.holdings += (amount - self.fees) / self.price
     bank.withdraw(amount)
+    print("{} holdings as balance after purchase: {:.2f}".format(self.name, self.get_balance()))
   def sell(self, amount, bank):
     self.holdings -= amount / self.price
     bank.deposit(amount - self.fees)
