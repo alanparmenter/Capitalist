@@ -1,6 +1,7 @@
 class Stock:
-  def __init__(self, price):
-    self.price = price
+  def __init__(self, name):
+    self.name = name
+    self.price = 300
     self.holdings = 0.0
     self.fees = 10
   def __repr__(self):
