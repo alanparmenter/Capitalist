@@ -12,4 +12,4 @@ print("Feta holdings as balance after sale: " + str(feta.get_balance()))
 print("{} balance after purchase: {}".format(farclays.name, farclays.get_balance()))
 for year in range(10):
   farclays.pay_interest()
-  print("Year {} {} balance after interest paid: {}".format(year+1,farclays.name, farclays.get_balance()))
+  print("Year {} {} balance after interest paid: {:.2f}".format(year+1,farclays.name, farclays.get_balance()))
