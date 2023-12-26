@@ -5,7 +5,7 @@ from stock import Stock
 print("\n*************************************\nWelcome to Capitalist!\nWin the game by doubling your money…\nLose the game by going bankrupt…\n*************************************\n")
 feta = Stock("FETA")
 farclays = Bank("Farclays Bank")
-print("To get you started, Farclays Bank have loaned you 10000, to buy FETA stock with.\nYou will have ten turns to buy or sell integer units of stock.\nYou cannot borrow more money from the bank.\nYou will get 5% interest on deposits\nThe bank will get 5% interest on their loan\nThere are fees of 10 on every transaction.\nEverything is liquidated at the end of the game.")
+print("To get you started, Farclays Bank have loaned you 10000, to buy FETA stock with.\nYou will have ten turns to buy or sell integer units of stock.\nYou cannot borrow more money from the bank.\nYou will get 5% interest per turn on deposits.\nThe bank will get 5% interest per turn on their loan.\nThere are fees of 10 on every buy or sell transaction.\nEverything is liquidated at the end of the game.")
 
 for year in range(10):
   print("\n")
