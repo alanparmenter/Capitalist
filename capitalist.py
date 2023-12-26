@@ -14,12 +14,12 @@ Would you like to buy {} stock at price {:.0f}? (units) ".format(farclays.name, 
   farclays.pay_interest()
   feta.price *= 0.75+random.randint(0,5)/10
 
+print("\n**********\nGame Over!\n**********\n")
+
 total = farclays.get_balance() + feta.get_balance()
 if total >= 20000:
-  print(total + " total wins the game!\n")
+  print("{:.2f} total wins the game!\n".format(total))
 elif total >= 10000:
-  print(total + " total gains some profit to put towards your pension. Try again with 10000?\n")
+  print("{:.2f} total gains some profit to put towards your pension.\nTry again with 10000?\n".format(total))
 else:
-  print(total + " total exceeds your debts so you have no choice but to declare bankruptcy\n")
-
-print("**********\nGame Over!\n**********\n")
+  print("{:.2f} total exceeds your debts so you have no choice but to declare bankruptcy\n".format(total))
